@@ -1,1 +1,35 @@
-"Projet_IVVQ" 
+Détecteur de mouvement avec Raspberry Pi
+Ce programme C pour Raspberry Pi utilise la bibliothèque bcm2835 pour lire l'état d'un capteur de mouvement et allumer différentes LED en fonction de l'état détecté.
+
+Fonctionnalités
+Utilise un capteur de mouvement connecté à la broche GPIO 21.
+Allume une LED jaune immédiatement après la détection.
+Si le mouvement persiste pendant 2 secondes, la LED rouge s'allume.
+Si aucun mouvement n'est détecté, la LED verte s'allume.
+Configuration du matériel
+Capteur de mouvement: Connectez votre capteur de mouvement à la broche GPIO 21.
+LEDs:
+LED Rouge à GPIO 12.
+LED Jaune à GPIO 16.
+LED Verte à GPIO 20.
+Compilation
+Utilisez la commande suivante pour compiler le programme :
+
+bash
+Copy code
+gcc -Wall detector.c -l bcm2835
+Cela produira un exécutable, par défaut nommé a.out (sauf si vous utilisez l'option -o pour donner un autre nom).
+
+Exécution
+Après la compilation, exécutez le programme avec :
+
+bash
+Copy code
+./a.out
+(Ou le nom que vous avez donné à l'exécutable si vous avez utilisé l'option -o)
+
+Dépendances
+Ce code dépend de la bibliothèque bcm2835. Assurez-vous de l'avoir installée sur votre Raspberry Pi.
+
+Avertissement
+Veillez à bien connecter vos composants pour éviter tout dommage à votre Raspberry Pi ou aux composants eux-mêmes.
