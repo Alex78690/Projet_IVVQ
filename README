@@ -14,17 +14,13 @@ LED Jaune à GPIO 16.
 LED Verte à GPIO 20.
 Compilation
 Utilisez la commande suivante pour compiler le programme :
-
-bash
-Copy code
 gcc -Wall detector.c -l bcm2835
+
 Cela produira un exécutable, par défaut nommé a.out (sauf si vous utilisez l'option -o pour donner un autre nom).
 
 Exécution
 Après la compilation, exécutez le programme avec :
 
-bash
-Copy code
 ./a.out
 (Ou le nom que vous avez donné à l'exécutable si vous avez utilisé l'option -o)
 
